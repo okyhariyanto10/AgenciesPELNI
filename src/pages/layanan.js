@@ -4,49 +4,70 @@ import Image from "next/legacy/image";
 import Headers from "components/Headers";
 import Footer from "components/Footer";
 import Panah from "images/arrow-up-right.svg";
+import ImagesItems from "components/ImagesItems";
+import CardItems from "components/CardItems";
 
 export default function layanan() {
   return (
-    <div className="">
+    <>
       <Head>
         <title>Pelni Agencies</title>
         <meta name="description" content="Web Pelni Agencies" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full absolute z-10 py-5">
-        <Headers />
-        <div className="w-full mb-10">
-          <Image src="/images/coverLayanan.png" width={1440} height={272} priority />
+
+      <Headers />
+      <div className="w-full mx-auto">
+        <ImagesItems
+          src={"/images/coverLayanan.png"}
+          alt="Kapal Pelni"
+          width={600}
+          height={200}
+          className="w-full mb-14"
+        /> </div>
+        <div className="lg:grid gap-4 lg:grid-cols-4 sm:grid-cols-1 sm:grid container px-14 py-14 mx-auto">
+          <div className="">
+            <ImagesItems
+              src={"/images/layanan1.png"}
+              alt="Kapal"
+              width={400}
+              height={700}
+              className="rounded-t-lg"
+            />
+            <h1 className="p-6 bg-black text-white font-semibold text-lg rounded-b-lg">General Hub</h1>
+          </div>
+          <div className="">
+            <ImagesItems
+              src={"/images/layanan1.png"}
+              alt="Kapal"
+              width={400}
+              height={700}
+              className="rounded-t-lg"
+            />
+            <h1 className="p-6 bg-black text-white font-semibold text-lg rounded-b-lg">General Hub</h1>
+          </div>
+          <div className="">
+            <ImagesItems
+              src={"/images/layanan1.png"}
+              alt="Kapal"
+              width={400}
+              height={700}
+              className="rounded-t-lg"
+            />
+            <h1 className="p-6 bg-black text-white font-semibold text-lg rounded-b-lg">General Hub</h1>
+          </div>
+        <div className="">
+          <ImagesItems
+            src={"/images/layanan1.png"}
+            alt="Kapal"
+            width={400}
+            height={700}
+            className="rounded-t-lg"
+          />
+          <h1 className="p-6 bg-black text-white font-semibold text-lg rounded-b-lg">General Hub</h1>
         </div>
-        <div className="px-16 mb-7">
-            <h1 className="mb-10 text-4xl font-semibold">Layanan Kami</h1>
-            <div className="flex">
-                <div className="w-3/12 mx-4">
-                    <Image className="w-full rounded-t-3xl" src="/images/layanan1.png" width={306} height={359} alt="kapal pelni"/>
-                    <h1 className="relative rounded-b-3xl bg-black text-white font-semibold text-base py-6 px-6">Full Port Agency
-                    <span><Panah className="absolute right-4 top-5" /></span></h1>
-                    
-                </div>
-                <div className="w-3/12 mx-4">
-                    <Image className="w-full rounded-t-3xl" src="/images/layanan1.png" width={306} height={359} alt="kapal pelni"/>
-                    <h1 className="relative rounded-b-3xl bg-black text-white font-semibold text-base py-6 px-6">Husbandary Service
-                    <span><Panah className="absolute right-4 top-5" /></span></h1>
-                    
-                </div>
-                <div className="w-3/12 mx-4">
-                    <Image className="w-full rounded-t-3xl" src="/images/layanan1.png" width={306} height={359} alt="kapal pelni"/>
-                    <h1 className="relative rounded-b-3xl bg-black text-white font-semibold text-base py-6 px-6">Sub Agency
-                    <span><Panah className="absolute right-4 top-5" /></span></h1>
-                </div>
-                <div className="w-3/12 mx-4">
-                    <Image className="w-full rounded-t-3xl" src="/images/layanan1.png" width={306} height={359} alt="kapal pelni"/>
-                    <h1 className="relative rounded-b-3xl bg-black text-white font-semibold text-base py-6 px-6">General Hub
-                    <span><Panah className="absolute right-4 top-5" /></span></h1>
-                </div>
-            </div>
-        </div>
-        <Footer />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

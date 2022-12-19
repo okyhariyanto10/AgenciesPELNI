@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Headers from "components/Headers";
 import Footer from "components/Footer"
+import Cover from "components/Cover"
 
 export default function tentangkami() {
   return (
@@ -11,12 +12,12 @@ export default function tentangkami() {
         <meta name="description" content="Web Pelni Agencies" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full absolute z-10 py-5">
-        <Headers />
-        <div className="w-full mb-10">
-          <Image src="/images/coverTentangKami.png" width={1440} height={272} alt="kapal pelni"/>
+      <Headers />
+      <section className="w-full mx-auto ">
+        <div className="w-full mb-10 mx-auto">
+          <Cover src={"/images/coverTentangKami.png"}/>
         </div>
-        <div className="px-16">
+        <div className="container mx-auto px-14 py-14">
           <div className="mb-8">
             <h1 className="text-4xl font-semibold mb-4">Tentang Kami</h1>
             <p className=" text-sm text-justify">
@@ -33,7 +34,7 @@ export default function tentangkami() {
               Indonesia yang terbuka untuk perdagangan luar negeri secara
               berkesinambungan dapat menunjuk perwakilannya di Indonesia.
             </p>
-            <br/>
+            <br />
             <p className="text-sm text-justify">
               PELNI AGENCIES telah melayani hampir 80% kapal asing yang memasuki
               wilayah perairan Indonesia juga kapal-kapal lokal. Memiliki 46
@@ -111,7 +112,7 @@ export default function tentangkami() {
           </div>
         </div>
         <Footer />
-      </div>
+      </section>
     </div>
   );
 }
